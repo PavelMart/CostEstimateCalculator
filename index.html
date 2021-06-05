@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- Передаем 1) '.table'-->
+    <table class="table">
+        <tr>
+            <th>Наименование</th>
+            <th>Выбор</th>
+            <th>Ед.изм.</th>
+            <th>Цена</th>
+            <th>Сумма</th>
+        </tr>
+        <tr class="row-item"> <!-- Передаем 2) '.row-item' -->
+            <td>Заливка и укладка бетона - поставка миксером (в готовую опалубку стен, ростверка)</td>
+            <td>
+                <button class="button button-minus">-</button> <!-- Передаем 8) '.button-minus' -->
+                <input type="text" value="0" class="item-count"> <!-- Передаем 3) '.item-count' -->
+                <button class="button button-plus">+</button> <!-- Передаем 7) '.button-plus' -->
+            </td>
+            <td>м.куб.</td>
+            <td>
+                <span class="price">1200</span> <!-- 6) '.price'; ПЕРЕДАЕМ ИМЕННО <span>, который содержит цифру -->
+                 руб.
+            </td>
+            <td>
+                <span class="summ">0</span> <!-- 5) '.summ'; ПЕРЕДАЕМ ИМЕННО <span>, который содержит цифру -->
+                 руб.
+            </td>
+        </tr>
+        <tr class="row-item">
+            <td>Заливка и укладка бетона - ручной замес (в готовую опалубку стен, ростверка)</td>
+            <td>
+                <button class="button button-minus">-</button>
+                <input type="text" value="0" class="item-count">
+                <button class="button button-plus">+</button>
+            </td>
+            <td>м.куб.</td>
+            <td><span class="price">2200</span> руб.</td>
+            <td><span class="summ">0</span> руб.</td>
+        </tr>
+        <tr class="row-item">
+            <td>Устройство монолитного перекрытия коттеджа и других построек (высота перекрытия – до 3,0 м)</td>
+            <td>
+                <button class="button button-minus">-</button>
+                <input type="text" value="0" class="item-count">
+                <button class="button button-plus">+</button>
+            </td>
+            <td>м.куб.</td>
+            <td><span class="price">5500</span> руб.</td>
+            <td><span class="summ">0</span> руб.</td>
+        </tr>
+        <tr class="row-result">
+            <td colspan="4">Итого</td>
+            <td>
+                <span class="result">0</span> <!-- 4) '.result'; ПЕРЕДАЕМ ИМЕННО <span>, который содержит цифру -->
+                 руб.
+            </td>
+        </tr>
+    </table>
+
+    <!-- Сначала подключаем скрипт калькулятора -->
+    <script src="./calculator.js"></script>
+
+    <!-- Затем Ваш основной скрипт, в котором возможно будут другие Ваши решения -->
+    <script src="./index.js"></script>
+</body>
+</html>
